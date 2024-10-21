@@ -29,9 +29,11 @@ export async function GET(req: NextRequest) {
     room,
     roomJoin: true,
     canPublish: true,
-    canSubscribe: true
+    canSubscribe: true,
   });
 
   // Return the token as a string
-  return NextResponse.json({ token: at.toJwt() });
+  const token = await at.toJwt();
+  console.log("Generated JWT token:", token); // Ensure this is a string
+  return NextResponse.json({ token });
 }

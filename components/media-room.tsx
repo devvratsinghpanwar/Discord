@@ -25,10 +25,13 @@ export const MediaRoom = ({ chatId, video, audio }: MediaRoomProps) => {
     (async () => {
       try {
         const resp = await fetch(`/api/livekit?room=${chatId}&username=${name}`);
+        
         const data = await resp.json();
+        console.log("response data: ",data)
 
         // Check if the token is valid before setting it
         if (data.token) {
+          console.log("token: ",data.token)
           setToken(data.token);
         } else {
           console.error("Failed to retrieve token:", data.error);
