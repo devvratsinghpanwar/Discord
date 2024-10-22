@@ -1,12 +1,10 @@
 "use client";
 
-import * as z from "zod";
 
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogDescription,
   DialogTitle,
 } from "../../components/ui/dialog";
 
@@ -17,7 +15,6 @@ import { Button } from "../ui/button";
 import { Check, Copy, RefreshCw } from "lucide-react";
 import { useOrigin } from "@/hooks/use-origin";
 import { useState } from "react";
-import { setConfig } from "next/config";
 import axios from "axios";
 
 export const InviteModal = () => {

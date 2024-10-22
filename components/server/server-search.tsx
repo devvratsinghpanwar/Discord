@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, SearchIcon } from "lucide-react";
+import { Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
   CommandDialog,
