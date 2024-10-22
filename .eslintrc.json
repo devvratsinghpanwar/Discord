@@ -1,3 +1,14 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off", // Turn off the rule for using `any`
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "ts-ignore": "allow-with-description", // Allow `@ts-ignore` but requires a description
+        "ts-expect-error": true // Prefer `@ts-expect-error` where appropriate
+      }
+    ],
+    "no-var": "off" // Enforce using `let` or `const` instead of `var`
+  }
 }
